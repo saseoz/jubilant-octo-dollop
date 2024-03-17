@@ -1,0 +1,145 @@
+:root {
+    --nutmeg: hsl(14, 45%, 36%);
+    --raspberry: hsl(332, 51%, 32%);
+
+    --white: hsl(0, 0%, 100%);
+    --rose: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --grey: hsl(30, 18%, 87%);
+    --brown: hsl(30, 10%, 34%);
+    --charcoal: hsl(24, 5%, 18%);
+
+    --outfit: "Young Serif", serif;
+    --youngSerif: "Outfit", sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    font-size: 16px;
+    font-family: var(--youngSerif);
+}
+body {
+    background-color: var(--white);
+    line-height: 1.5rem;
+}
+/* font setting */
+h1,
+h2 {
+    font-family: var(--outfit);
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: var(--nutmeg);
+}
+h3 {
+    margin-bottom: 1rem;
+    color: var(--raspberry)
+}
+p,
+li {
+    color: var(--brown);
+}
+span {
+    font-weight: 700;
+}
+/* list setting */
+ol, ul {
+    padding-inline: 1.5rem;
+    margin-bottom: 2rem;
+}
+li {
+    padding-left: .7rem;
+    margin-bottom: .5rem;
+}
+li:last-child {
+    margin-bottom: 0;
+}
+ul li::marker {
+    font-size: .7rem;
+    color: var(--brown);
+}
+ol li::marker {
+    color: var(--nutmeg);
+    font-weight: 700;
+}
+/* wrappers and img */
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+img {
+    width: 100%;
+}
+.sect-wrapper {
+    margin-block-end: 2rem;
+    width: 80%;
+}
+/* Introduction sect. */
+.intro-sect {
+    margin-top: 2rem;
+}
+.intro-sect h1 {
+    line-height: 2rem;
+    color: var(--charcoal);
+}
+/* Preparation sect. */
+.prep-sect {
+    background-color: var(--rose);
+    border-radius: 8px;
+    padding: 2rem;
+}
+.prep-sect ul {
+    margin: 0;
+}
+.prep-sect li::marker {
+    color: var(--raspberry);
+}
+.prep-sect h2 {
+    color: var(--nutmeg);
+}
+/* Ingredient and Instruction sect. */
+.ingredient-sect, 
+.instruction-sect {
+    border-block-end: 1px solid var(--grey);
+}
+/* Nutrition sect. */
+.nutrition-sect .rows {
+    border-bottom: 1px solid var(--grey);
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.nutrition-sect .rows:last-child {
+    border: none;
+}
+.nutrition-sect span {
+    color: var(--nutmeg);
+    width: 30%;
+}
+@media (min-width: 1148px) {
+    body {
+        background-color: var(--eggshell);        
+    }
+    .wrapper {
+        width: 40%;
+        border-radius: 2rem;
+        margin-block: 5rem;
+    }
+    img {
+        border-radius: 1rem;
+        margin-top: 2rem;
+        width: 85%;
+    }
+    .sect-wrapper {
+        width: 85%;
+    }
+}
