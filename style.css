@@ -130,7 +130,7 @@ img {
         background-color: var(--eggshell);        
     }
     .wrapper {
-        width: 40%;
+        width: 50%;
         border-radius: 2rem;
         margin-block: 5rem;
     }
